@@ -21,6 +21,10 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import { Chart } from './Chart';
+import { PolarChart, SmallCharts } from './PolarChart';
+import { PieChart } from './PieChart';
+import { RadarChart } from './RadarChart';
+import { DoughnutChart } from './DoughnutChart';
 
 const drawerWidth = 240;
 
@@ -155,25 +159,30 @@ export default function SideNav() {
       </Drawer>
       <Main open={open}>
         <DrawerHeader />
-        <Typography paragraph>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Rhoncus dolor purus non
-          enim praesent elementum facilisis leo vel. Risus at ultrices mi tempus
-          imperdiet. Semper risus in hendrerit gravida rutrum quisque non tellus.
-          Convallis convallis tellus id interdum velit laoreet id donec ultrices.
-          Odio morbi quis commodo odio aenean sed adipiscing. Amet nisl suscipit
-          adipiscing bibendum est ultricies integer quis. Cursus euismod quis viverra
-          nibh cras. Metus vulputate eu scelerisque felis imperdiet proin fermentum
-          leo. Mauris commodo quis imperdiet massa tincidunt. Cras tincidunt lobortis
-          feugiat vivamus at augue. At augue eget arcu dictum varius duis at
-          consectetur lorem. Velit sed ullamcorper morbi tincidunt. Lorem donec massa
-          sapien faucibus et molestie ac.
-        </Typography>
-        <Box sx={{ flexGrow: 1 }}>
-          <Grid container spacing={2}>
+        
+        <Box sx={{ flexGrow: 2 }}>
+          <Grid container>
             <Grid item xs={12}>
               <Chart/>
             </Grid>
+            
+          </Grid>
+        </Box>
+        <Box sx={{ flexGrow: 1 }}>
+          <Grid container spacing={2}>
+            <Grid item xs={3}>
+              <DoughnutChart/>
+            </Grid>
+            <Grid item xs={3}>
+              <PolarChart/>
+            </Grid>
+            <Grid item xs={3}>
+              <PieChart/>
+            </Grid>
+            <Grid item xs={3}>
+              <RadarChart/>
+            </Grid>
+            
             
           </Grid>
         </Box>

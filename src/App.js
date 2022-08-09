@@ -4,7 +4,7 @@ import SideNav from './components/SideNav'
 
 const darkTheme = createTheme({
   palette: {
-    mode: 'dark',
+    mode: 'light',
   },
 });
 
